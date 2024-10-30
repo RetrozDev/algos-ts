@@ -4,6 +4,13 @@
 // Écrivez une fonction qui prend une chaîne de caractères en entrée et retourne cette chaîne inversée.
 // Exemple : "hello" → "olleh"
 
+const reverseString: (str: string) => string = (str) => {
+    return str.split("").reverse().join("");
+}
+
+console.info(`Exercice 1: \n ${reverseString("Hello")}`);
+
+
 
 // 2. Vérifier un palindrome
 // Écrivez une fonction qui vérifie si une chaîne est un palindrome (se lit de la même manière à l'envers).
