@@ -38,21 +38,33 @@ const countVowels: (str: string) => number = (str) => {
 	return str
 		.toLowerCase()
 		.split("")
-		.filter((vowel) => "aeiou".includes(vowel)).length;
+		.filter((vowel: string) => "aeiou".includes(vowel)).length;
 };
 
 console.info(`Exercice 4: \n ${countVowels("hello")}`);
 
-
 // 5. Fibonacci
 // Écrivez une fonction qui retourne le n-ième nombre de la séquence de Fibonacci.
 // Exemple : fibonacci(5) → 5 (0, 1, 1, 2, 3, 5)
+const fibonacci: (n: number) => Array<number> = (n) => {
+	const fibArray: Array<number> = [0, 1];
+	for (let i = 2; i < n; i++) {
+		fibArray[i] = fibArray[i - 1] + fibArray[i - 2];
+	}
+	return fibArray.slice(0, n);
+};
+
+console.info(`Exercice 5: \n ${fibonacci(10)}`);
 
 // Niveau 2 : Intermédiaire
 
 // 6. Tri par sélection
 // Implémentez l'algorithme de tri par sélection pour trier un tableau de nombres.
 // Exemple : [64, 25, 12, 22, 11] → [11, 12, 22, 25, 64]
+const sortArray: (arr: Array<number>) => Array<number> = (arr) => {
+	return arr.sort((a:number, b:number) => a - b);
+};
+console.info(`Exercice 6: \n ${sortArray([64, 25, 12, 22, 11])}`);
 
 // 7. Facteur de nombre
 // Écrivez une fonction qui retourne un tableau des facteurs d'un nombre donné.
