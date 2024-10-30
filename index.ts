@@ -5,20 +5,31 @@
 // Exemple : "hello" → "olleh"
 
 const reverseString: (str: string) => string = (str) => {
-    return str.split("").reverse().join("");
-}
+	return str.split("").reverse().join("");
+};
 
 console.info(`Exercice 1: \n ${reverseString("Hello")}`);
-
-
 
 // 2. Vérifier un palindrome
 // Écrivez une fonction qui vérifie si une chaîne est un palindrome (se lit de la même manière à l'envers).
 // Exemple : "racecar" → true, "hello" → false
+const checkPalindrome: (str: string) => boolean = (str) => {
+	return (
+		str.toLocaleLowerCase() ===
+		str.toLocaleLowerCase().split("").reverse().join("")
+	);
+};
+
+console.info(`Exercice 2: \n ${checkPalindrome("racecar")}`);
 
 // 3. Trouver le maximum
 // Écrivez une fonction qui prend un tableau de nombres et retourne le plus grand nombre.
 // Exemple : [1, 3, 2] → 3
+const findBigger: (arr: Array<number>) => number = (arr) => {
+	return Math.max(...arr);
+};
+
+console.info(`Exercice 3: \n ${findBigger([1, 3, 2])}`);
 
 // 4. Compter les voyelles
 // Écrivez une fonction qui compte le nombre de voyelles dans une chaîne de caractères.
