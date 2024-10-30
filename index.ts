@@ -62,13 +62,18 @@ console.info(`Exercice 5: \n ${fibonacci(10)}`);
 // Implémentez l'algorithme de tri par sélection pour trier un tableau de nombres.
 // Exemple : [64, 25, 12, 22, 11] → [11, 12, 22, 25, 64]
 const sortArray: (arr: Array<number>) => Array<number> = (arr) => {
-	return arr.sort((a:number, b:number) => a - b);
+	return arr.sort((a: number, b: number) => a - b);
 };
 console.info(`Exercice 6: \n ${sortArray([64, 25, 12, 22, 11])}`);
 
 // 7. Facteur de nombre
 // Écrivez une fonction qui retourne un tableau des facteurs d'un nombre donné.
 // Exemple : factors(12) → [1, 2, 3, 4, 6, 12]
+const factors: (n: number) => Array<number> = (n) => {
+	return Array.from({ length: n }, (_, i) => i + 1).filter((i) => n % i === 0);
+};
+
+console.info(`Exercice 6: \n ${factors(12)}`);
 
 // 8. Trouver le deuxième plus grand nombre
 // Écrivez une fonction qui retourne le deuxième plus grand nombre d'un tableau.
