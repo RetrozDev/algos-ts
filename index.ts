@@ -34,6 +34,15 @@ console.info(`Exercice 3: \n ${findBigger([1, 3, 2])}`);
 // 4. Compter les voyelles
 // Écrivez une fonction qui compte le nombre de voyelles dans une chaîne de caractères.
 // Exemple : "hello" → 2
+const countVowels: (str: string) => number = (str) => {
+	return str
+		.toLowerCase()
+		.split("")
+		.filter((vowel) => "aeiou".includes(vowel)).length;
+};
+
+console.info(`Exercice 4: \n ${countVowels("hello")}`);
+
 
 // 5. Fibonacci
 // Écrivez une fonction qui retourne le n-ième nombre de la séquence de Fibonacci.
