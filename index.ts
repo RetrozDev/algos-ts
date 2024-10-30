@@ -78,17 +78,24 @@ console.info(`Exercice 7: \n ${factors(12)}`);
 // 8. Trouver le deuxième plus grand nombre
 // Écrivez une fonction qui retourne le deuxième plus grand nombre d'un tableau.
 // Exemple : [3, 1, 4, 2] → 3
-const findSecondBigger : (arr: Array<number>) => number = (arr) => {
-    return arr.sort((a: number, b: number) => a - b).reverse()[1]
-}
+const findSecondBigger: (arr: Array<number>) => number = (arr) => {
+	return arr.sort((a: number, b: number) => a - b).reverse()[1];
+};
 
 console.info(`Exercice 8: \n ${findSecondBigger([3, 1, 4, 2])}`);
-
-
 
 // 9. Fusionner deux tableaux triés
 // Écrivez une fonction qui fusionne deux tableaux triés en un seul tableau trié.
 // Exemple : [1, 3, 5] et [2, 4, 6] → [1, 2, 3, 4, 5, 6]
+const mergeArrays: (arr1: Array<number>, arr2: Array<number>) => Array<number> =
+	(arr1, arr2) => {
+		return arr1
+			.sort((a: number, b: number) => a - b)
+			.concat(arr2.sort((a: number, b: number) => a - b))
+			.sort((a, b) => a - b);
+	};
+
+console.info(`Exercice 9: \n ${mergeArrays([1, 5, 3], [2, 6, 4])}`);
 
 // 10. Trouver les éléments uniques
 // Écrivez une fonction qui prend un tableau et retourne un tableau contenant uniquement les éléments uniques.
