@@ -73,11 +73,18 @@ const factors: (n: number) => Array<number> = (n) => {
 	return Array.from({ length: n }, (_, i) => i + 1).filter((i) => n % i === 0);
 };
 
-console.info(`Exercice 6: \n ${factors(12)}`);
+console.info(`Exercice 7: \n ${factors(12)}`);
 
 // 8. Trouver le deuxième plus grand nombre
 // Écrivez une fonction qui retourne le deuxième plus grand nombre d'un tableau.
 // Exemple : [3, 1, 4, 2] → 3
+const findSecondBigger : (arr: Array<number>) => number = (arr) => {
+    return arr.sort((a: number, b: number) => a - b).reverse()[1]
+}
+
+console.info(`Exercice 8: \n ${findSecondBigger([3, 1, 4, 2])}`);
+
+
 
 // 9. Fusionner deux tableaux triés
 // Écrivez une fonction qui fusionne deux tableaux triés en un seul tableau trié.
