@@ -8,7 +8,7 @@ const reverseString: (str: string) => string = (str) => {
 	return str.split("").reverse().join("");
 };
 
-console.info(`Exercice 1: \n ${reverseString("Hello")}`);
+console.info(`Exercice 1: \n ${reverseString("Hello")}\n`);
 
 // 2. Vérifier un palindrome
 // Écrivez une fonction qui vérifie si une chaîne est un palindrome (se lit de la même manière à l'envers).
@@ -20,7 +20,7 @@ const checkPalindrome: (str: string) => boolean = (str) => {
 	);
 };
 
-console.info(`Exercice 2: \n ${checkPalindrome("racecar")}`);
+console.info(`Exercice 2: \n ${checkPalindrome("racecar")}\n`);
 
 // 3. Trouver le maximum
 // Écrivez une fonction qui prend un tableau de nombres et retourne le plus grand nombre.
@@ -29,7 +29,7 @@ const findBigger: (arr: Array<number>) => number = (arr) => {
 	return Math.max(...arr);
 };
 
-console.info(`Exercice 3: \n ${findBigger([1, 3, 2])}`);
+console.info(`Exercice 3: \n ${findBigger([1, 3, 2])}\n`);
 
 // 4. Compter les voyelles
 // Écrivez une fonction qui compte le nombre de voyelles dans une chaîne de caractères.
@@ -41,7 +41,7 @@ const countVowels: (str: string) => number = (str) => {
 		.filter((vowel: string) => "aeiou".includes(vowel)).length;
 };
 
-console.info(`Exercice 4: \n ${countVowels("hello")}`);
+console.info(`Exercice 4: \n ${countVowels("hello")}\n`);
 
 // 5. Fibonacci
 // Écrivez une fonction qui retourne le n-ième nombre de la séquence de Fibonacci.
@@ -54,7 +54,7 @@ const fibonacci: (n: number) => Array<number> = (n) => {
 	return fibArray.slice(0, n);
 };
 
-console.info(`Exercice 5: \n ${fibonacci(10)}`);
+console.info(`Exercice 5: \n ${fibonacci(10)}\n`);
 
 // Niveau 2 : Intermédiaire
 
@@ -64,7 +64,7 @@ console.info(`Exercice 5: \n ${fibonacci(10)}`);
 const sortArray: (arr: Array<number>) => Array<number> = (arr) => {
 	return arr.sort((a: number, b: number) => a - b);
 };
-console.info(`Exercice 6: \n ${sortArray([64, 25, 12, 22, 11])}`);
+console.info(`Exercice 6: \n ${sortArray([64, 25, 12, 22, 11])}\n`);
 
 // 7. Facteur de nombre
 // Écrivez une fonction qui retourne un tableau des facteurs d'un nombre donné.
@@ -73,7 +73,7 @@ const factors: (n: number) => Array<number> = (n) => {
 	return Array.from({ length: n }, (_, i) => i + 1).filter((i) => n % i === 0);
 };
 
-console.info(`Exercice 7: \n ${factors(12)}`);
+console.info(`Exercice 7: \n ${factors(12)}\n`);
 
 // 8. Trouver le deuxième plus grand nombre
 // Écrivez une fonction qui retourne le deuxième plus grand nombre d'un tableau.
@@ -82,7 +82,7 @@ const findSecondBigger: (arr: Array<number>) => number = (arr) => {
 	return arr.sort((a: number, b: number) => a - b).reverse()[1];
 };
 
-console.info(`Exercice 8: \n ${findSecondBigger([3, 1, 4, 2])}`);
+console.info(`Exercice 8: \n ${findSecondBigger([3, 1, 4, 2])}\n`);
 
 // 9. Fusionner deux tableaux triés
 // Écrivez une fonction qui fusionne deux tableaux triés en un seul tableau trié.
@@ -95,11 +95,15 @@ const mergeArrays: (arr1: Array<number>, arr2: Array<number>) => Array<number> =
 			.sort((a, b) => a - b);
 	};
 
-console.info(`Exercice 9: \n ${mergeArrays([1, 5, 3], [2, 6, 4])}`);
+console.info(`Exercice 9: \n ${mergeArrays([1, 5, 3], [2, 6, 4])}\n`);
 
 // 10. Trouver les éléments uniques
 // Écrivez une fonction qui prend un tableau et retourne un tableau contenant uniquement les éléments uniques.
 // Exemple : [1, 2, 2, 3, 4, 4] → [1, 2, 3, 4]
+const deleteDuplicate: (arr: Array<number>) => Array<number> = (arr) => {
+	return Array.from(new Set(arr));
+};
+console.info(`Exercice 10: \n ${deleteDuplicate([1, 2, 2, 3, 4, 4])}\n`);
 
 // Niveau 3 : Difficile
 
